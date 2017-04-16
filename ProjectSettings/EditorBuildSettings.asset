@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Resources/Scenes/BeathovenMenu.unity
+    guid: eb53c63d8d18e4c468b0d627f7656c02
+  - enabled: 1
+    path: Assets/Resources/Scenes/MotherOfAllScenes.unity
+    guid: e53ee5d557370364a833dbd8817290fd
+  - enabled: 0
+    path: Assets/Resources/Scenes/Menu.unity
+    guid: 1c89dee330532483e8be026773977159
+  - enabled: 0
+    path: Assets/Resources/Scenes/SingleStadium.unity
+    guid: c25d7fb6350e5460397be62155e6d6da
+  - enabled: 0
+    path: Assets/Resources/Scenes/MultiStadium.unity
+    guid: d3255ba8ee6ea421a846b117631882fe
