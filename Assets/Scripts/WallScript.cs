@@ -21,11 +21,11 @@ public class WallScript : MonoBehaviour {
 
 	/*	not tested yet, might work
 		if(ApplicationModel.songs[currentSong, 2] > 0.70){
-			// Assigns a material named "Assets/Resources/stormySky" to the object.
-			Material stormySky = Resources.Load("stormySky", typeof(Material)) as Material;
+			// Assigns a material named "Assets/Resources/stormysky" to the object.
+			Material stormySky = Resources.Load("stormysky", typeof(Material)) as Material;
 			this.GetComponent.renderer.material = stormySky;
 		}else{
-		Material blueSky = Resources.Load("blueSky", typeof(Material)) as Material;
+		Material blueSky = Resources.Load("bluesky", typeof(Material)) as Material;
 			this.GetComponent.renderer.material = blueSky;
 		}*/
 
