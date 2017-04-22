@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class WallScript : MonoBehaviour {
 
-	public float smoothTime = 0.5F;
-	public float yVelocity = 0.0F;
-
+	public Texture[] textures;
+	int currentSong = ApplicationModel.currentSong;
 
 	// Use this for initialization
 	void Start () {
 
-		int currentSong = ApplicationModel.currentSong;
-
-		if(ApplicationModel.songs[currentSong, 2] > 0.70)
-			this.GetComponent<Renderer>().material.color = Color.black;
+		if (textures.Length == 0)
+            return;
+         else if(ApplicationModel.songs[this.currentSong, 2] > 0.70)
+		//	this.GetComponent<Renderer>().material.color = Color.black;
+			this.GetComponent<Renderer>().material.mainTexture = textures[0];
 		else
-			this.GetComponent<Renderer>().material.color = new Color( 0.529f, 0.807f, 0.980f, 1.0f);
+			this.GetComponent<Renderer>().material.mainTexture = textures[1];
+
+		
 	}
 
 	/*	not tested yet, might work
@@ -32,6 +34,7 @@ public class WallScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		 
 	}
 }
 
