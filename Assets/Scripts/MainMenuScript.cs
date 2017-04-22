@@ -18,9 +18,9 @@ public class MainMenuScript : MonoBehaviour {
  
     StreamReader theReader;
  
-    String Host = "130.233.86.39";
+    String Host = "10.100.21.137";
  
-    Int32 Port = 8888;
+    Int32 Port = 5204;
 
 
 
