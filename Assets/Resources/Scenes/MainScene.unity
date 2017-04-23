@@ -173,6 +173,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &439147271
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4018696491979474, guid: 3b3d3455493cb4fe9a2a5dbdaeaad3e8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10.469368
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018696491979474, guid: 3b3d3455493cb4fe9a2a5dbdaeaad3e8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -12.210487
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018696491979474, guid: 3b3d3455493cb4fe9a2a5dbdaeaad3e8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 58.83385
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018696491979474, guid: 3b3d3455493cb4fe9a2a5dbdaeaad3e8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018696491979474, guid: 3b3d3455493cb4fe9a2a5dbdaeaad3e8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018696491979474, guid: 3b3d3455493cb4fe9a2a5dbdaeaad3e8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018696491979474, guid: 3b3d3455493cb4fe9a2a5dbdaeaad3e8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018696491979474, guid: 3b3d3455493cb4fe9a2a5dbdaeaad3e8, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109377139321886, guid: 3b3d3455493cb4fe9a2a5dbdaeaad3e8, type: 2}
+      propertyPath: m_Name
+      value: GameObject
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3b3d3455493cb4fe9a2a5dbdaeaad3e8, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1197728798
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sampleCubePrefab: {fileID: 1109377139321886, guid: 3b3d3455493cb4fe9a2a5dbdaeaad3e8,
     type: 2}
-  _maxScale: 100
+  _maxScale: 1000
 --- !u!1 &1336590210
 GameObject:
   m_ObjectHideFlags: 0
