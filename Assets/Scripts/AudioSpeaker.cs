@@ -33,6 +33,8 @@ public class AudioSpeaker : MonoBehaviour {
 	}
 
 	void bandBuffer(){
+		// Following this tutorial: https://www.youtube.com/watch?v=lEUuC3LQnzs
+
 		for (int g = 0; g < 8; g++) {
 			if (_frequencyBand [g] > _bandBuffer [g]) {
 				_bandBuffer [g] = _frequencyBand [g];
