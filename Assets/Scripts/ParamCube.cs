@@ -6,6 +6,7 @@ public class ParamCube : MonoBehaviour {
 
 	public int _band;
 	public float _startScale, _scaleMultiplier;
+	public bool _useBuffer;
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +15,12 @@ public class ParamCube : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.localScale = new Vector3 (transform.localScale.x, (AudioSpeaker._frequencyBand [_band] * _scaleMultiplier) + _startScale, transform.localScale.z);
+		if (_useBuffer) {
+			transform.localScale = new Vector3 (transform.localScale.x, (AudioSpeaker._bandBuffer [_band] * _scaleMultiplier) + _startScale, transform.localScale.z);
+		}
+
+		if (!_useBuffer) {
+			transform.localScale = new Vector3 (transform.localScale.x, (AudioSpeaker._frequencyBand [_band] * _scaleMultiplier) + _startScale, transform.localScale.z);
+		}
 	}
 }

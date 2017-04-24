@@ -9,6 +9,8 @@ public class AudioSpeaker : MonoBehaviour {
 	AudioSource _audioSource;
 	public static float[] _samples = new float[512]; 
 	public static float[] _frequencyBand = new float[8];
+	public static float[] _bandBuffer = new float[8];
+	float[] _bufferDecrease = new float[8];
 
  	//void Awake(){
     //    myMusic = Resources.LoadAll("Music",typeof(AudioClip));
@@ -26,7 +28,22 @@ public class AudioSpeaker : MonoBehaviour {
 	void Update () {
 		getSpectrumAudioSource ();
 		makeFrequBands ();
+		bandBuffer ();
 		
+	}
+
+	void bandBuffer(){
+		for (int g = 0; g < 8; g++) {
+			if (_frequencyBand [g] > _bandBuffer [g]) {
+				_bandBuffer [g] = _frequencyBand [g];
+				_bufferDecrease[g] = 0.005f;
+			}
+
+			if (_frequencyBand [g] < _bandBuffer [g]) {
+				_bandBuffer [g] -= _bufferDecrease [g];
+				_bufferDecrease[g] = 1.2f;
+			}
+		}
 	}
 
 	void getSpectrumAudioSource(){
