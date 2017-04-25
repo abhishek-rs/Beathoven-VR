@@ -8,9 +8,9 @@ public class AudioSpeaker : MonoBehaviour {
 	//Object[] myMusic;
 	AudioSource _audioSource;
 	public static float[] _samples = new float[512]; 
-	public static float[] _frequencyBand = new float[64];
-	public static float[] _bandBuffer = new float[64];
-	float[] _bufferDecrease = new float[64];
+	public static float[] _frequencyBand = new float[512];
+	public static float[] _bandBuffer = new float[512];
+	float[] _bufferDecrease = new float[512];
 
  	//void Awake(){
     //    myMusic = Resources.LoadAll("Music",typeof(AudioClip));
@@ -35,7 +35,7 @@ public class AudioSpeaker : MonoBehaviour {
 	void bandBuffer(){
 		// Following this tutorial: https://www.youtube.com/watch?v=lEUuC3LQnzs
 
-		for (int g = 0; g < 64; g++) {
+		for (int g = 0; g < 512; g++) {
 			if (_frequencyBand [g] > _bandBuffer [g]) {
 				_bandBuffer [g] = _frequencyBand [g];
 				_bufferDecrease[g] = 0.005f;
@@ -56,7 +56,7 @@ public class AudioSpeaker : MonoBehaviour {
 
 		int count = 0;
 
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 8; i++) {
 
 			float average = 0;
 			int sampCount = (int)Mathf.Pow (2, i) * 2;
