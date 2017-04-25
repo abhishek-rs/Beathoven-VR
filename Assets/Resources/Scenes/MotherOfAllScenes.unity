@@ -3907,7 +3907,7 @@ Light:
   m_Color: {r: 1, g: 0.99802727, b: 0.99264705, a: 1}
   m_Intensity: 1
   m_Range: 10
-  m_SpotAngle: 30
+  m_SpotAngle: 126
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -3924,7 +3924,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -3938,7 +3938,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 659299871}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 4.91, y: 17.92, z: 0}
+  m_LocalPosition: {x: 1.2, y: 24.35, z: -6.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4859,7 +4859,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1437790674
+  randomSeed: -1025736859
   InitialModule:
     serializedVersion: 3
     enabled: 1
