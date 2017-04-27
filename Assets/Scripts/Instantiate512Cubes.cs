@@ -5,7 +5,7 @@ using UnityEngine;
 public class Instantiate512Cubes : MonoBehaviour {
 
 	public GameObject _sampleCubePrefab;
-	GameObject[] _sampleCube = new GameObject[64];
+	GameObject[] _sampleCube = new GameObject[512];
 	public float _maxScale;
 
 	// Use this for initialization
@@ -21,13 +21,12 @@ public class Instantiate512Cubes : MonoBehaviour {
 			_sampleCube [i] = _instanceSampleCube;
 		}
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		for (int i = 0; i < 64; i++) {
 			if (_sampleCube != null) {
-				// transform.localScale = new Vector3 (transform.localScale.x, (AudioSpeaker._bandBuffer [_band] * _scaleMultiplier) + _startScale, transform.localScale.z);
-				_sampleCube [i].transform.localScale = new Vector3 (10, (AudioSpeaker._bandBuffer [i] * _maxScale) + 2, 10);
+				_sampleCube [i].transform.localScale = new Vector3 (10, (AudioSpeaker._samples [i] * _maxScale) + 2, 10);
 			}
 		}
 	}
