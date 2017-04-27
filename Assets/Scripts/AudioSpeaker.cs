@@ -61,7 +61,6 @@ public class AudioSpeaker : MonoBehaviour {
 			float average = 0;
 			int sampCount = (int)Mathf.Pow (2, i) * 2;
 
-			Debug.Log ("sampCount: " + sampCount);
 
 			if (i == 7) {
 				sampCount += 2;
