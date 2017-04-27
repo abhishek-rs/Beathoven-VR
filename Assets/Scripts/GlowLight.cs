@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class GlowLight : MonoBehaviour {
 
-	public float duration = 1.0F;
-	public Color color0 = Color.red;
-	public Color color1 = Color.blue;
-	public Light lt;
+	Renderer rend;
+	public float _maxScale;
+
+	int currentSong = ApplicationModel.currentSong;
 
 	void Start() {
-		lt = GetComponent<Light>();
+		rend = GetComponent<Renderer>();
+		//rend.material.shader = Shader.Find("Specular");
 	}
 
 	void Update() {
-		float t = Mathf.PingPong(Time.time, duration) / duration;
-		lt.color = Color.Lerp(color0, color1, t);
+
+		Debug.Log ("energy value: " + ApplicationModel.songs [this.currentSong, 2]);
+
+		// change color intensity based on energy
+		if (ApplicationModel.songs [this.currentSong, 2] > 0.70) {
+			// pick a random color
+			// Color newColor = new Color( Random.value, Random.value, Random.value, 1.0f );
+
+			// apply it on current object's material
+			rend.material.SetColor("_Color", Color.red);
+		}
 	}
 }
