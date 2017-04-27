@@ -5,6 +5,7 @@ using UnityEngine;
 public class GlowingLights : MonoBehaviour {
 
 	Light light;
+	int currentSong = ApplicationModel.currentSong;
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +23,11 @@ public class GlowingLights : MonoBehaviour {
 		}
 
 		// float rand = Random.Range (10.0f, 100.0f);
-		average = (sumCount / 64) * 70;
+		average = (sumCount / 64) * 250 * (float)ApplicationModel.songs [this.currentSong, 2];
+
+		if (ApplicationModel.songs [this.currentSong, 2] > 0.70) {
+			light.color = Color.red;
+		}
 
 		light.intensity = average;
 		
