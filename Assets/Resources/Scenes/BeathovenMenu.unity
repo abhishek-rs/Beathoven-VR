@@ -538,7 +538,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Space Oddity
+  m_Text: Bohemian Rhapsody
 --- !u!222 &349706789
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1631,7 +1631,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The Beatles
+  m_Text: Let there be rock
 --- !u!222 &785926601
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1912,7 +1912,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AC-DC
+  m_Text: Space Oddity
 --- !u!222 &891741093
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1986,7 +1986,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Bohemian Rhapsody
+  m_Text: Come together
 --- !u!222 &936038482
 CanvasRenderer:
   m_ObjectHideFlags: 0

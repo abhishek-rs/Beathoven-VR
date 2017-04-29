@@ -23,13 +23,13 @@ public class GlowingLights : MonoBehaviour {
 		}
 
 		// float rand = Random.Range (10.0f, 100.0f);
-		average = (sumCount / 64) * 250 * (float)ApplicationModel.songs [this.currentSong, 2];
+		average = (sumCount / 64) * 350 * (float)ApplicationModel.songs [this.currentSong, 2];
 
 		// change color based on Spotify data
-		if (ApplicationModel.songs [this.currentSong, 2] > 0.70) {
+		if (ApplicationModel.songs [this.currentSong, 2] > 0.50) {
 			light.color = Color.red;
-		} else if (ApplicationModel.songs [this.currentSong, 2] <= 0.70) {
-			if (ApplicationModel.songs [this.currentSong, 1] > 0.50) {
+		} else if (ApplicationModel.songs [this.currentSong, 2] <= 0.50) {
+			if (ApplicationModel.songs [this.currentSong, 1] > 0.20) {
 				light.color = Color.cyan;	
 			} else {
 				light.color = Color.gray;	

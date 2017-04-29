@@ -21,7 +21,7 @@ public class Instantiate512Cubes : MonoBehaviour {
 			m.enabled = true;
 
 			this.transform.eulerAngles = new Vector3 (0, -5.625f * i, 0);
-			_instanceSampleCube.transform.position = Vector3.forward * 100;
+			_instanceSampleCube.transform.position = Vector3.forward * 60;
 			_sampleCube [i] = _instanceSampleCube;
 
 			// change color based on Spotify data (to fix, renderer not working)

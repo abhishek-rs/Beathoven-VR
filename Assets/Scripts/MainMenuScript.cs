@@ -18,7 +18,7 @@ public class MainMenuScript : MonoBehaviour {
  
     StreamReader theReader;
  
-    String Host = "10.100.21.137";
+    String Host = "10.100.31.228";
  
     Int32 Port = 5204;
 
@@ -32,11 +32,11 @@ public class MainMenuScript : MonoBehaviour {
         {  
  
              setupSocket();
- 			writeSocket(ApplicationModel.currentSong.ToString() + ApplicationModel.currentSong.ToString());
+ 			writeSocket(ApplicationModel.currentSong.ToString() + ApplicationModel.currentMode.ToString());
              
         }
 
-        else writeSocket(ApplicationModel.currentSong.ToString() + ApplicationModel.currentSong.ToString());
+        else writeSocket(ApplicationModel.currentSong.ToString() + ApplicationModel.currentMode.ToString());
 
 
         closeSocket();

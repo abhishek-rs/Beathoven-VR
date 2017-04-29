@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent (typeof(AudioSource))]
 
 public class AudioSpeaker : MonoBehaviour {
-	//Object[] myMusic;
+	Object[] myMusic;
 	AudioSource _audioSource;
 	public static float[] _samples = new float[512]; 
 	public static float[] _frequencyBand = new float[512];
@@ -20,7 +20,9 @@ public class AudioSpeaker : MonoBehaviour {
     void Start()
     {
 		_audioSource = GetComponent<AudioSource> ();
-        //GetComponent<AudioSource>().Play();
+		myMusic = Resources.LoadAll("Music",typeof(AudioClip));
+		_audioSource.clip = myMusic[ApplicationModel.currentSong] as AudioClip;
+        GetComponent<AudioSource>().Play();
         //Debug.Log(myMusic);
     }
 		
