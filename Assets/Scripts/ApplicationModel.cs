@@ -5,6 +5,7 @@ using UnityEngine;
 public class ApplicationModel {
 
 	static public int currentSong = 0;
+	static public int currentMode = 0;
 	static public double [,] songs = new double [4,5]{ 
 								//mode, valence, energy, positivity, negativity 
     							{1.00, 0.529, 0.756, 0.068, 0.115}, 			//Sound of silence 
@@ -15,6 +16,10 @@ public class ApplicationModel {
 
 	public static void setCurrentSong(int i){
 		currentSong = i;
+	}
+
+	public static void setCurrentMode(int i){
+		currentMode = i;
 	}
 
 }

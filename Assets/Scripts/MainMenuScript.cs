@@ -32,11 +32,11 @@ public class MainMenuScript : MonoBehaviour {
         {  
  
              setupSocket();
- 			writeSocket(ApplicationModel.currentSong.ToString());
+ 			writeSocket(ApplicationModel.currentSong.ToString() + ApplicationModel.currentSong.ToString());
              
         }
 
-        else writeSocket(ApplicationModel.currentSong.ToString());
+        else writeSocket(ApplicationModel.currentSong.ToString() + ApplicationModel.currentSong.ToString());
 
 
         closeSocket();
