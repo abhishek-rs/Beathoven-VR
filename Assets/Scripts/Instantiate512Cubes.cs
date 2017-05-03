@@ -21,7 +21,7 @@ public class Instantiate512Cubes : MonoBehaviour {
 			m.enabled = true;
 
 			this.transform.eulerAngles = new Vector3 (0, -5.625f * i, 0);
-			_instanceSampleCube.transform.position = Vector3.forward * 60;
+			_instanceSampleCube.transform.position = Vector3.forward * 85;
 			_sampleCube [i] = _instanceSampleCube;
 
 			// change color based on Spotify data (to fix, renderer not working)
@@ -33,6 +33,8 @@ public class Instantiate512Cubes : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		float vel = 100f;
+
 		for (int i = 0; i < 64; i++) {
 
 			if (_sampleCube != null) {
@@ -44,7 +46,8 @@ public class Instantiate512Cubes : MonoBehaviour {
 					_sampleCube[i].transform.GetChild(0).GetComponent<Renderer>().material.color = Color.Lerp(Color.white, Color.blue, Mathf.PingPong(Time.time, 1));
 				}
 
-				_sampleCube [i].transform.localScale = new Vector3 (10, (AudioSpeaker._samples [i] * _maxScale) + 2, 10);
+				//_sampleCube [i].transform.localScale = new Vector3 (10, Mathf.SmoothDamp(1, AudioSpeaker._samples [i] * _maxScale * 20, ref vel, 1.5f), 10);
+				_sampleCube [i].transform.localScale = new Vector3 (10, AudioSpeaker._samples [i] * _maxScale  + 1, 10);
 			}
 		}
 	}
